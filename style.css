@@ -1,4 +1,4 @@
-/* Base Styles (for larger screens) */
+/* General Layout */
 body {
     font-family: "Georgia", serif;
     background-color: #f9f9f9;
@@ -10,19 +10,35 @@ body {
 #content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     background-color: #fcfcfc;
-    padding: 10px 0;
-    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
 #wiki-logo {
-    width: 200px;
+    width: 120px;
+    height: auto;
 }
 
+#search-bar, #menu-button {
+    display: inline-block;
+}
+
+/* Menu button (three-line icon) */
+#menu-button {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Top navigation bar */
 #topnav {
     margin-top: 10px;
 }
@@ -35,25 +51,26 @@ body {
 
 #topnav ul li {
     display: inline-block;
-    margin-right: 15px;
 }
 
 #topnav ul li a {
-    text-decoration: none;
-    color: #0066cc;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #0066cc;
 }
 
 #topnav ul li a:hover {
     background-color: #f1f1f1;
 }
 
-#firstHeading {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-top: 0;
+/* Page Content */
+#bodyContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 /* Table of Contents */
@@ -63,8 +80,6 @@ body {
     width: 20%;
     box-sizing: border-box;
     border-radius: 5px;
-    float: left;
-    margin-right: 20px;
 }
 
 .toc h2 {
@@ -87,7 +102,7 @@ body {
     text-decoration: underline;
 }
 
-/* Infobox */
+/* Infobox Styles */
 .infobox {
     width: 25%;
     margin-right: 20px;
@@ -95,7 +110,6 @@ body {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    float: right;
 }
 
 .infobox-header {
@@ -129,7 +143,6 @@ section {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    float: left;
 }
 
 h2 {
@@ -179,70 +192,69 @@ footer {
     padding-top: 10px;
 }
 
-/* Mobile Responsiveness: For devices smaller than 768px (tablets/phones) */
+/* Tablet and Mobile Adjustments */
 @media screen and (max-width: 768px) {
-
-    /* Adjust content width */
-    #content {
-        padding: 10px;
+    /* Stack elements vertically */
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    #topnav ul li {
+    /* Adjust the logo size on smaller screens */
+    #wiki-logo {
+        width: 100px;
+    }
+
+    /* Search bar should be full width on small screens */
+    #search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Show the menu button only on mobile */
+    #menu-button {
         display: block;
-        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
-    /* Make the table of contents and infobox full-width on mobile */
+    /* Adjust the table of contents and infobox layout */
     .toc, .infobox {
         width: 100%;
-        float: none;
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin: 10px 0;
     }
 
-    /* Ensure sections are full-width and centered */
-    section {
+    /* Make the content sections take up more space on small screens */
+    #content {
+        padding: 10px;
         width: 100%;
-        margin: 0;
-    }
-
-    /* Adjust font size of headings */
-    h2 {
-        font-size: 1.8em;
-    }
-
-    #firstHeading {
-        font-size: 2em;
-    }
-
-    /* Align images properly */
-    #bodyContent img {
-        float: none;
-        display: block;
-        margin-left: 0;
-        margin-bottom: 15px;
-    }
-
-    footer {
-        margin-top: 20px;
-        font-size: 0.8em;
     }
 }
 
-/* Extra small devices (phones) */
+/* For even smaller screens (phones in portrait) */
 @media screen and (max-width: 480px) {
-
-    /* Adjust headings for smaller screens */
-    h2 {
-        font-size: 1.5em;
-    }
-
-    #firstHeading {
+    /* Ensure text sizes are readable */
+    #firstHeading h1 {
         font-size: 1.8em;
     }
 
-    /* Ensure that text is readable */
-    body {
+    /* Reduce spacing for better layout */
+    #header {
         padding: 5px;
+    }
+
+    /* Content sections should take full width */
+    section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust table formatting */
+    table {
+        font-size: 14px;
+    }
+
+    /* Make links more prominent */
+    a {
+        font-size: 16px;
     }
 }
