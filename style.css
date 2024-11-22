@@ -1,0 +1,258 @@
+/* General Layout */
+body {
+    font-family: "Georgia", serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Header Styling */
+#header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+}
+
+/* Link Styling */
+a {
+    color: #0066cc;  /* Blue color for unvisited links */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0066cc;  /* Keep the same blue color after being clicked */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0044cc;  /* Slightly darker blue when hovered */
+}
+
+/* Top Bar Styling */
+#top-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#menu-button img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#wiki-logo {
+    width: 150px;
+    margin-right: 20px;
+}
+
+#search-form {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+#search-form button {
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #e9ecef;
+}
+
+/* Navigation Styling */
+#topnav {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+#topnav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 15px;
+}
+
+#topnav ul li {
+    display: inline;
+}
+
+#topnav ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#topnav ul li a:hover {
+    background-color: #e9ecef;
+}
+
+/* Infobox Styles */
+.infobox {
+    width: 25%;
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.infobox-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 5px;
+}
+
+.infobox-data {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox-data td {
+    padding: 8px;
+    border-top: 1px solid #ccc;
+}
+
+.infobox-data tr:first-child td {
+    border-top: none;
+}
+
+/* Table of Contents */
+.toc {
+    background-color: #f1f1f1;
+    padding: 15px;
+    width: 20%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.toc h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc ul li {
+    margin-bottom: 5px;
+}
+
+.toc ul li a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.toc ul li a:hover {
+    text-decoration: underline;
+    color: #0044cc;
+}
+
+/* Section Styles */
+section {
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+#bodyContent img {
+    margin-bottom: 15px;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #fff;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
