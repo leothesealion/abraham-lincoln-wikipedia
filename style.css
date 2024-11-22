@@ -1,129 +1,93 @@
-/* General Layout */
+/* Base Styles (for larger screens) */
 body {
     font-family: "Georgia", serif;
     background-color: #f9f9f9;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     line-height: 1.6;
 }
 
 #content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Header Styling */
 #header {
-    background-color: #f8f9fa;
+    background-color: #fcfcfc;
+    padding: 10px 0;
+    text-align: center;
     border-bottom: 1px solid #ddd;
-    padding: 0;
-}
-
-/* Link Styling */
-a {
-    color: #0066cc;  /* Blue color for unvisited links */
-    text-decoration: none;
-}
-
-a:visited {
-    color: #0066cc;  /* Keep the same blue color after being clicked */
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #0044cc;  /* Slightly darker blue when hovered */
-}
-
-/* Top Bar Styling */
-#top-bar {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-}
-
-#menu-button {
-    background: none;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-#menu-button img {
-    width: 24px;
-    height: 24px;
-    display: block;
-    margin: 0;
-    padding: 0;
 }
 
 #wiki-logo {
-    width: 150px;
-    margin-right: 20px;
+    width: 200px;
 }
 
-#search-form {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-#search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-#search-form button {
-    padding: 5px 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#search-form button:hover {
-    background-color: #e9ecef;
-}
-
-/* Navigation Styling */
 #topnav {
-    text-align: center;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-    padding: 5px 0;
+    margin-top: 10px;
 }
 
 #topnav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: inline-flex;
-    gap: 15px;
+    text-align: center;
 }
 
 #topnav ul li {
-    display: inline;
+    display: inline-block;
+    margin-right: 15px;
 }
 
 #topnav ul li a {
     text-decoration: none;
     color: #0066cc;
-    padding: 5px 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #topnav ul li a:hover {
-    background-color: #e9ecef;
+    background-color: #f1f1f1;
 }
 
-/* Infobox Styles */
+#firstHeading {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Table of Contents */
+.toc {
+    background-color: #f1f1f1;
+    padding: 15px;
+    width: 20%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+}
+
+.toc h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc ul li a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.toc ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Infobox */
 .infobox {
     width: 25%;
     margin-right: 20px;
@@ -131,7 +95,7 @@ a:hover {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    flex-shrink: 0;
+    float: right;
 }
 
 .infobox-header {
@@ -157,50 +121,15 @@ a:hover {
     border-top: none;
 }
 
-/* Table of Contents */
-.toc {
-    background-color: #f1f1f1;
-    padding: 15px;
-    width: 20%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    flex-shrink: 0;
-    margin-left: 20px;
-}
-
-.toc h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.toc ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.toc ul li {
-    margin-bottom: 5px;
-}
-
-.toc ul li a {
-    text-decoration: none;
-    color: #0066cc;
-}
-
-.toc ul li a:hover {
-    text-decoration: underline;
-    color: #0044cc;
-}
-
 /* Section Styles */
 section {
-    width: 50%;
+    width: 70%;
     padding: 20px;
     background-color: #fff;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: left;
 }
 
 h2 {
@@ -209,7 +138,14 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Image Styling */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Image Styles */
 img {
     max-width: 100%;
     height: auto;
@@ -218,10 +154,22 @@ img {
 }
 
 #bodyContent img {
+    float: right;
+    margin-left: 20px;
     margin-bottom: 15px;
 }
 
-/* Footer Styling */
+/* Link Styling */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
     margin-top: 40px;
     font-size: 0.9em;
@@ -231,28 +179,70 @@ footer {
     padding-top: 10px;
 }
 
-/* Tables */
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
+/* Mobile Responsiveness: For devices smaller than 768px (tablets/phones) */
+@media screen and (max-width: 768px) {
+
+    /* Adjust content width */
+    #content {
+        padding: 10px;
+    }
+
+    #topnav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Make the table of contents and infobox full-width on mobile */
+    .toc, .infobox {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Ensure sections are full-width and centered */
+    section {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Adjust font size of headings */
+    h2 {
+        font-size: 1.8em;
+    }
+
+    #firstHeading {
+        font-size: 2em;
+    }
+
+    /* Align images properly */
+    #bodyContent img {
+        float: none;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 0.8em;
+    }
 }
 
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border-top: 1px solid #ddd;
-}
+/* Extra small devices (phones) */
+@media screen and (max-width: 480px) {
 
-table th {
-    background-color: #f1f1f1;
-    font-weight: bold;
-}
+    /* Adjust headings for smaller screens */
+    h2 {
+        font-size: 1.5em;
+    }
 
-table td {
-    background-color: #fff;
-}
+    #firstHeading {
+        font-size: 1.8em;
+    }
 
-table tr:hover {
-    background-color: #f9f9f9;
+    /* Ensure that text is readable */
+    body {
+        padding: 5px;
+    }
 }
